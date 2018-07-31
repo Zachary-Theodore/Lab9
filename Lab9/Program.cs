@@ -55,6 +55,28 @@ namespace Lab9
                 students.Add(temp1);
             }
 
+            while (true)
+            {
+                Console.Clear();
+                Students temp = new Students();
+                Console.WriteLine("Please provide a Name:");
+                temp.Name = (Console.ReadLine());
+                Console.WriteLine("Please provide a hobbie:");
+                temp.Hobbie = (Console.ReadLine());
+                Console.WriteLine("Please provide an origin:");
+                temp.Origin = Console.ReadLine();
+                Console.WriteLine("Please provide a birthday:");
+                temp.Birthday = (Console.ReadLine());
+
+                students.Add(temp);// add the temp object to the employees list
+                Console.WriteLine("Do you want to add more employees?");
+                string choice = Console.ReadLine();
+                if (choice == "N")
+                {
+                    break;
+                }
+            }
+
             foreach (Students e in students)
             {
                 Console.WriteLine($"{e.Name}, {e.Hobbie}, {e.Origin}, {e.Birthday}");
