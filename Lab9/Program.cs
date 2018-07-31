@@ -12,7 +12,6 @@ namespace Lab9
         static void Main(string[] args)
         {
             List<Students> students = new List<Students>();
-            Students temp1 = new Students();
             List<string> studentNames = new List<string>()
             {
             "Mr. Meeseeks",
@@ -47,6 +46,7 @@ namespace Lab9
             };
             for (int i = 0; i < studentNames.Count; i++)
             {
+            Students temp1 = new Students();
                 temp1.Name = studentNames[i];
                 temp1.Hobbie = hobbies[i];
                 temp1.Origin = origin[i];
